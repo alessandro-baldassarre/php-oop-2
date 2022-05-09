@@ -8,7 +8,7 @@ class CreditCard{
      protected $expirationDate;
      protected $balance;
 
-    public function __construct (string $bankName, int $cardNumber, string $expirationDate, int $balance) {
+    public function __construct ($bankName, $cardNumber, $expirationDate, $balance) {
         
         $this->bankName = $bankName;
         $this->cardNumber = $cardNumber;

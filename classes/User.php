@@ -10,19 +10,20 @@ class User {
     protected $discount;
     protected $creditCard;
 
-    public function __construct(string $firstName,string $lastName,string $email,string $password,string $birthDate , bool $isRegistered, object $creditCard){
+    public function __construct($firstName,$lastName,$email,$password,$birthDate ,$isRegistered,$creditCard){
         $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->email = $email;
         $this->password = $password;
-        $this->birthdate = $birthDate;
+        $this->birthDate = $birthDate;
         $this->isRegistered = $isRegistered;
-        $this->discount = $this->setDiscont();
+        $this->discount = $this->setDiscount();
         $this->creditCard = $creditCard;
     }
 
-    protected function setDiscount(){
-        ($isRegistered) ? $this->discount = 20 : $this->discount = 0; 
+    public function setDiscount(){
+        ($this->isRegistered) ? $discount = 20 : $discount = 0; 
+        return $discount;
     }
 
     public function getFirstName($firstName){
@@ -47,7 +48,7 @@ class User {
         return $this->birthDate;
     }
 
-    public function getIsRegestered($isRegistered){
+    public function getIsRegistered($isRegistered){
         return $this->isRegistered;
     }
 
