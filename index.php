@@ -1,3 +1,8 @@
+<?php 
+include_once __DIR__ . "/classes/Product.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +12,10 @@
     <title>PHP OOP 2</title>
 </head>
 <body>
+    <?php 
     
+        
+
+    ?>
 </body>
 </html>
