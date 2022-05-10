@@ -15,14 +15,14 @@ include_once __DIR__ . "/classes/User.php";
     <body>
         <?php 
     
-        $americanExpress = new CreditCard("American Express", 401234976190, "2023", 300);
+        $americanExpress = new CreditCard("American Express", 401234976190, "2023", 100);
         $ball = new Toy("eraser", "outdoor", "Dog toy ball", 10, "small");
-        $userOne = new User("Alessandro", "Baldassarre", "blabla@gmail.com", 322423423, 1990, true , $americanExpress);
+        $userOne = new User("Alessandro", "Baldassarre", "blabla@gmail.com", 322423423, 1990, true );
+        
         ?>
-        <pre>
-            <?php 
-            var_dump($userOne);
-            var_dump($ball)
+        <pre><?php var_dump($userOne);
+            var_dump($ball);
+            echo $userOne->buyProduct($ball,$americanExpress);
              ?>
         </pre>
 
